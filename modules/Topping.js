@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
 
-export default (props) => {
+export default ({ favor, topping }) => {
+
     return (
       <h3>IsFavourite</h3>
     )

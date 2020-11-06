@@ -1,15 +1,24 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import Topping from "./Topping.js"
 
-export default () => {
-  return (
-    <Fragment>
-      <h1>Your favourite pizza toppings are: </h1>
-      <ul>
-        <li><Topping /></li>
-        <li><h3>Pepperoni</h3></li>
-        <li><h3>Onion</h3></li>
-      </ul>
-    </Fragment>
-  )
+class Pizza extends Component {
+  constructor() {
+    super()
+    this.state = { favTopping: "Mashrooms" }
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <h1>Your favourite pizza topping is: {this.state.favTopping}</h1>
+        <ul>
+          <li><Topping favor={this.state.favTopping} topping="Onions" /></li>
+          <li><Topping favor={this.state.favTopping} topping="Mashrooms" /></li>
+          <li><Topping favor={this.state.favTopping} topping="Pepperoni" /></li>
+        </ul>
+      </Fragment>
+    )
+  }
 }
+
+export default Pizza;
