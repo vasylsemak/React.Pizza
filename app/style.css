@@ -1,7 +1,9 @@
 * {
-  background-color: aquamarine;
+  background-color: rgb(218, 250, 239);
+  color: rgb(102, 102, 102);
+  margin: 2rem;
 }
 
 .selected {
-  background-color: rgb(186, 147, 223);
+  background-color: rgb(24, 114, 46);
 }
