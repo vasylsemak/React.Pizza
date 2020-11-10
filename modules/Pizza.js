@@ -10,7 +10,10 @@ class Pizza extends Component {
 
   handleClick(event) {
     let clickedText = event.target.innerText;
-    this.setState(()=> ({ favTopping: clickedText }));
+
+    if(!event.target.matches(["ul"])) {
+      this.setState(()=> ({ favTopping: clickedText }));
+    }
   }
 
   render() {
